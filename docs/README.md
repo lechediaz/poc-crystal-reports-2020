@@ -175,7 +175,9 @@ Estos bloques de acontinuación, se agregan automáticamente al interactuar con 
 </system.webServer>
 ```
 
-> El reporte en esta POC está embebido, por lo que no se exporta al momento de prublicar el sitio web, sino que este ya se encuentra compilado, ver más [aquí](https://help.sap.com/docs/SAP_CRYSTAL_REPORTS,_DEVELOPER_VERSION_FOR_MICROSOFT_VISUAL_STUDIO/0d6684e153174710b8b2eb114bb7f843/ec3cbb556fdb101497906a7cb0e91070.html). Es por eso que en el código de la página [Reporte.aspx](../ASPNET.VB/Reporte.aspx.vb) se asocia el reporte como una instancia al Control de Report Viewer:
+El reporte en esta POC está embebido, por lo que no se exporta al momento de publicar el sitio web, sino que este ya se encuentra compilado, ver más [aquí](https://help.sap.com/docs/SAP_CRYSTAL_REPORTS,_DEVELOPER_VERSION_FOR_MICROSOFT_VISUAL_STUDIO/0d6684e153174710b8b2eb114bb7f843/ec3cbb556fdb101497906a7cb0e91070.html).
+
+Es por eso que en el código de la página [Reporte.aspx](../ASPNET.VB/Reporte.aspx.vb) se asocia el reporte como una instancia al Control de Report Viewer:
 
 ```vb
 Dim report As New CrystalReport1()
