@@ -3,6 +3,8 @@
     - [Paso a paso](#paso-a-paso)
     - [Validar instalación](#validar-instalación)
   - [Servidor](#servidor)
+    - [Paso a paso](#paso-a-paso-1)
+    - [Validar instalación](#validar-instalación-1)
 - [Configuración](#configuración)
 - [Enlaces de interés](#enlaces-de-interés)
 
@@ -38,7 +40,7 @@ Damos click en "Next" nuevamente.
 
 ![Instalación desarrollo 5](images/instalacion-desarrollo-5.PNG)
 
-Esperamos que se instale.
+Esperamos a que se instale.
 
 > En algún momento nos pedirá permisos de administrador, le damos click en aceptar.
 
@@ -76,9 +78,57 @@ Si se visualiza el reporte entonces todo esta bien.
 
 ## Servidor
 
-En el servidor generalmente será de 64bits, entonces se debe instalar el runtime **CR13SP36MSI64_0-80007712.MSI**.
+El servidor generalmente será de 64bits, entonces se debe instalar el runtime **CR13SP36MSI64_0-80007712.MSI**.
 
 ![Descargas de runtime](images/descargas-2.PNG)
+
+### Paso a paso
+
+Ejecutar el instalador, haciendo doble click o click derecho y seleccionar "Install".
+
+![Instalación servidor 1](images/instalacion-servidor-1.PNG)
+
+Una vez abierta la ventana, damos click en "Next".
+
+![Instalación servidor 2](images/instalacion-servidor-2.PNG)
+
+Aceptamos los términos de licencia y damos click en "Next".
+
+![Instalación servidor 3](images/instalacion-servidor-3.PNG)
+
+Damos click en "Next" nuevamente.
+
+![Instalación servidor 4](images/instalacion-servidor-4.PNG)
+
+Damos click en "Yes" en la ventada que pide autorización al administrador.
+
+![Instalación servidor 5](images/instalacion-servidor-5.PNG)
+
+Esperamos a que se instale.
+
+![Instalación servidor 6](images/instalacion-servidor-6.PNG)
+
+Damos click en "Finish"
+
+![Instalación servidor 7](images/instalacion-servidor-7.PNG)
+
+Una vez terminada la instalación, verificamos en los programas instalados que se encuentre este registro.
+
+![Instalación servidor 8](images/instalacion-servidor-8.PNG)
+
+### Validar instalación
+
+Verificar que existe la carpeta **crystalreportviewers13** en la ruta `C:\inetpub\wwwroot\aspnet_client\system_web\4_0_30319\crystalreportviewers13`
+
+![Verificar instalación servidor 1](images/verifica-instalacion-servidor-1.PNG)
+
+También, es posible ir a la ruta `C:\Windows\Microsoft.NET\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine` y verificar si existe una carpeta que inicia con **v4.0_13.0.4000.0**
+
+![Verificar instalación servidor 2](images/verifica-instalacion-servidor-2.PNG)
+
+Adicionalmente podemos ingresar a la carpeta, ver las propidades del archivo **CrystalDecisions.CrystalReports.Engine.dll** y verificar si es la misma de la imagen.
+
+![Verificar instalación servidor 3](images/verifica-instalacion-servidor-3.PNG)
 
 # Configuración
 
@@ -123,6 +173,13 @@ Estos bloques de acontinuación, se agregan automáticamente al interactuar con 
   </handlers>
   <validation validateIntegratedModeConfiguration="false"/>
 </system.webServer>
+```
+
+> El reporte en esta POC está embebido, por lo que no se exporta al momento de prublicar el sitio web, sino que este ya se encuentra compilado, ver más [aquí](https://help.sap.com/docs/SAP_CRYSTAL_REPORTS,_DEVELOPER_VERSION_FOR_MICROSOFT_VISUAL_STUDIO/0d6684e153174710b8b2eb114bb7f843/ec3cbb556fdb101497906a7cb0e91070.html). Es por eso que en el código de la página [Reporte.aspx](../ASPNET.VB/Reporte.aspx.vb) se asocia el reporte como una instancia al Control de Report Viewer:
+
+```vb
+Dim report As New CrystalReport1()
+CrystalReportViewer1.ReportSource = report
 ```
 
 # Enlaces de interés
