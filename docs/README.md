@@ -86,35 +86,35 @@ El servidor generalmente será de 64bits, entonces se debe instalar el runtime *
 
 Ejecutar el instalador, haciendo doble click o click derecho y seleccionar "Install".
 
-![Instalación servidor 1](images/instalacion-servidor-1.PNG)
+![Instalación servidor 1](images/instalacion-servidor-1.png)
 
 Una vez abierta la ventana, damos click en "Next".
 
-![Instalación servidor 2](images/instalacion-servidor-2.PNG)
+![Instalación servidor 2](images/instalacion-servidor-2.png)
 
 Aceptamos los términos de licencia y damos click en "Next".
 
-![Instalación servidor 3](images/instalacion-servidor-3.PNG)
+![Instalación servidor 3](images/instalacion-servidor-3.png)
 
 Damos click en "Next" nuevamente.
 
-![Instalación servidor 4](images/instalacion-servidor-4.PNG)
+![Instalación servidor 4](images/instalacion-servidor-4.png)
 
 Damos click en "Yes" en la ventada que pide autorización al administrador.
 
-![Instalación servidor 5](images/instalacion-servidor-5.PNG)
+![Instalación servidor 5](images/instalacion-servidor-5.png)
 
 Esperamos a que se instale.
 
-![Instalación servidor 6](images/instalacion-servidor-6.PNG)
+![Instalación servidor 6](images/instalacion-servidor-6.png)
 
 Damos click en "Finish"
 
-![Instalación servidor 7](images/instalacion-servidor-7.PNG)
+![Instalación servidor 7](images/instalacion-servidor-7.png)
 
 Una vez terminada la instalación, verificamos en los programas instalados que se encuentre este registro.
 
-![Instalación servidor 8](images/instalacion-servidor-8.PNG)
+![Instalación servidor 8](images/instalacion-servidor-8.png)
 
 ### Validar instalación
 
